@@ -2,7 +2,7 @@ pipeline {
     agent any
     environment {
         DOCKERHUB_CRED = credentials('dockerhub')
-        IMAGE_NAME = "rupeshmsrit/devops_ia"
+        IMAGE_NAME = "rupeshmsrit//devops_ia"
     }
 
     stages {
