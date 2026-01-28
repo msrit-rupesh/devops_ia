@@ -2,16 +2,12 @@ pipeline {
     agent any
     environment {
         DOCKERHUB_CRED = credentials('dockerhub')
-        IMAGE_NAME = "rupeshmsrit/dev_react"
+        IMAGE_NAME = "rupeshmsrit/devops_ia"
     }
 
-    // triggers {
-    //     cron ('* * * * *')
-    // }
-    
     stages {
         stage('checkout') {
-            steps { git url: 'https://github.com/msrit-rupesh/dev_react/', branch: 'main' }
+            steps { git url: 'https://github.com/msrit-rupesh/devops_ia/', branch: 'main' }
         }
         stage('Build Docker Image') {
             steps {
@@ -34,3 +30,7 @@ pipeline {
         always { deleteDir() }
     }
 }
+
+
+
+
